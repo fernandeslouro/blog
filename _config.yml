@@ -14,7 +14,7 @@ author:
   url: #yoururl
 permalink: pretty
 
-baseurl: ""
+baseurl: "http://louro.xyz/blog"
 
 highlighter: none
 
