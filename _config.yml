@@ -39,7 +39,7 @@ plugins:
 collections:
   pages:
     output: true
-    permalink: {{ site.baseurl }}/:name
+    permalink: /:name
   posts:
     output: true
     permalink: /:year/:month/:day/:slug
