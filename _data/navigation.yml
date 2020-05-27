@@ -6,4 +6,4 @@ links:
 - title: Search
   url: /blog/search
 - title: Rss
-  url: /blog/atom.xml
+  url: atom.xml
