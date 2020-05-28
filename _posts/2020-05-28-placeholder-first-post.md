@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My first blog post
+title: Placeholder First Post
 description: This is a one line long test for my first post
 summary: Options to learn to code online.
 tags: [coding]
