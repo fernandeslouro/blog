@@ -1,5 +1,5 @@
 site: João Louro
-url: http://blog.louro.xyz
+url: http://blog.louro.xyz/
 title: João Louro
 description: Blog 
 twitter:
@@ -14,7 +14,7 @@ author:
   url: #yoururl
 permalink: pretty
 
-baseurl: "/blog"
+baseurl: ""
 
 highlighter: none
 
