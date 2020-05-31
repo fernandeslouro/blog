@@ -6,7 +6,6 @@ tags: [machine-learning]
 
 This is the first in a series of two posts outlining some of my early work applying machine learning approaches to public policy problems. Each post will go over a separate project. You can also read the [second post](http://blog.louro.xyz/2020/02/05/hunting-for-illegal-swimming-pools) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations.
 
-On this first post, I'll briefly outline a project developed for the Municipality of Rotterdam, as part of the 2017 Data Science for Social Good fellowship, describing the approach taken.
 
 ***
 
