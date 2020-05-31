@@ -4,8 +4,7 @@ title: Detecting Green Rooftops in Rotterdam
 tags: [machine-learning]
 ---
 
-This is the first in a series of two posts on my work applying machine learning approaches to public policy problems. You can also read the [second post](http://blog.louro.xyz/2020/02/05/hunting-for-illegal-swimming-pools) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations. Each of the posts goes over a separate project. On this first post, I'll explain how my team and I developed a tool for the detection of green rooftops in Rotterdam, and why.
-
+This is the first in a series of two posts on my work applying machine learning approaches to public policy problems. You can also read the [second post](http://blog.louro.xyz/2020/02/05/hunting-for-illegal-swimming-pools) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations. Each of the posts goes over a separate project. On this first one, I'll explain how my team and I developed a tool for the detection of green rooftops in Rotterdam, and why.
 
 ***
 
