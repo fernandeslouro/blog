@@ -4,24 +4,24 @@ title: Detecting Green Rooftops in Rotterdam
 tags: [machine-learning]
 ---
 
-This is the first in a series of two posts outlining some of my early work applying machine learning approaches to public policy problems. Each post will go over a separate project. You can also read the [second post](http://blog.louro.xyz/2020/02/05/hunting-for-illegal-swimming-pools) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations.
+This is the first in a series of two posts on my work applying machine learning approaches to public policy problems. You can also read the [second post](http://blog.louro.xyz/2020/02/05/hunting-for-illegal-swimming-pools) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations. Each of the posts goes over a separate project. On this first post, I'll explain how my team and I developed a tool for the detection of green rooftops in Rotterdam, and why.
 
 
 ***
 
 In the city of Rotterdam, pressure on public space is high due to the population density and the extensive built environment. As a city that is 90% below sea level, a major problem it faces is the threat of floods and storm surges. In the context of storm water management, green rooftops can play a major role in reducing the pressure on Rotterdam’s combined sewer system, since this kind of roofing has the unique capability of retaining precipitation, decreasing the speed of rainwater runoff, and limiting peak discharges.
 
-The 14 square km of flat roofs in the city of Rotterdam have an untapped potential as a multi-use and sustainable extension of the public space at ground level, and offer space for Rotterdam to address its urban planning challenges. Since the municipality decided to subsidize the conversion of normal flat roofs into green rooftops, it was essential to have a tool to verify their existence and monitoring their upkeep.
+The 14 km2 of flat roofs in the city of Rotterdam have an untapped potential as a multi-use and sustainable extension of the public space at ground level, and offer space for Rotterdam to address its urban planning challenges. Since the municipality decided to subsidize the conversion of normal flat roofs into green rooftops, it was essential to have a tool to verify their existence and monitoring their upkeep.
 
 We partnered with the Municipality of Rotterdam to increase the use of evidence-based urban planning, specifically for storm water management, by developing a scalable tool that identifies green roofs.
 
-### Data
+## Data
 
 Being developed with the support of the municipality, this project had access to proprietary, governmental data. This included high-definition Color-Infrared (CIR) aerial imagery of an area of interest in Rotterdam, and a file containing polygons outlining each building in the same area. CIR images contain the traditional RGB bands of color images, and an additional band on the near-infrared spectre. The polygons are part of the national building database of the Netherlands, and are normally collected at time of construction. They can be used as a proxy for the outline of each rooftop, and contain additional information such as the year of construction and type of building.
 
 ![CIR imagery and corresponding building polygons.](/assets/images/cir-polygons.png)
 
-### Approach
+## Approach
 
 The initial step of our approach was to use the CIR imagery to obtain the Normalized Difference Vegetation Index @ndvi for the whole area of interest, as shown in formula [eq:ndvi].
 
@@ -32,8 +32,7 @@ The NDVI is a simple graphical indicator often used to analyze remote sensing me
 
 ![Pipeline.](/assets/images/approach.png)
 
-### Results
-
+## Results
 
 The approach achieved a 90% precision and 80% recall in a sample of our labeled data used as validation set. It quickly detected other vegetated rooftops across the city, and the provided insights made the tool useful for assistance in public policy. The tool can also provide a quick overview of the city’s rooftops with both number of vegetated roofs and their total relative area.
 
@@ -42,7 +41,7 @@ Were this project developed today, I would start by experimenting with Deep Lear
 Our initial version of the tool was open sourced under a permissive license, and is avaliable on [Github](https://github.com/DSSG-EUROPE/rotterdam).
 
 
-## Conclusion
+# Conclusion
 
 Despite their proof-of-concept status, both these projects have had significant impact. This is due to the fact that they produce actionable insights.
 
