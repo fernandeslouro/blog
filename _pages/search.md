@@ -3,8 +3,7 @@ layout: page
 title: Search
 ---
 
-You can search my posts. Search for machine-learning.
-
+You can search my posts either by the words in the title or by the tag (e.g. **machine-learning**).
 
 <style>
 	#search-container {
