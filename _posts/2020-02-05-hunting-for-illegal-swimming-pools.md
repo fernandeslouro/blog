@@ -4,6 +4,11 @@ title: Hunting for Illegal Swimming Pools
 tags: [machine-learning]
 ---
 
+This is the second post in a series of two outlining some of my early work applying machine learning approaches to public policy problems. Each post will go over a separate project. You can also read the [first post](http://blog.louro.xyz/2020/02/05/hunting-for-illegal-swimming-pools) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations.
+
+
+***
+
 Cascais is a municipality in the Lisbon District of Portugal, located on the Portuguese Riviera. An important tourist destination, the municipality is one of the wealthiest in the Iberian Peninsula. It has one of the most expensive real estate markets and one of the highest costs of living in the country and is consistently ranked highly for its quality of life. A common form of tax evasion in wealthy, sunny areas is to delay the building of swimming pools when constructing new houses until after their evaluation for taxation. The municipality of Cascais set out to end this phenomenon using data-driven approaches.
 
 ### Data
