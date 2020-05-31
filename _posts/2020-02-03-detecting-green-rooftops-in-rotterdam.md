@@ -1,14 +1,14 @@
 ---
 layout: post
 title: Detecting Green Rooftops in Rotterdam
-description: This is a one line long test for my first post
-summary: Options to learn to code online.
 tags: [machine-learning]
 ---
 
-This document, compiled as part of my application to the Eastern European Machine Learning Summer School, includes an overview of my previous work using machine learning approaches to aid in public policy. A description of two projects will be provided, developed for the municipalities of Rotterdam, Netherlands, and Cascais, Portugal. For the Dutch municipality, a tool for the detection and evaluation of upkeep in green rooftops was developed, while for Cascais the project aids in the detection of unlicensed swimming pools. This document will be divided in two parts, describing the approaches to both problems.
+This is the first in a series of two posts outlining some of my early work applying machine learning approaches to public policy problems. Each post will go over a separate project. You can also read the [second post](http://blog.louro.xyz/2020/02/05/hunting-for-illegal-swimming-pools) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations.
 
-## Detection of Green Rooftops in Rotterdam, Netherlands
+On this first post, I'll briefly outline a project developed for the Municipality of Rotterdam, as part of the 2017 Data Science for Social Good fellowship, describing the approach taken.
+
+***
 
 In the city of Rotterdam, pressure on public space is high due to the population density and the extensive built environment. As a city that is 90% below sea level, a major problem it faces is the threat of floods and storm surges. In the context of storm water management, green rooftops can play a major role in reducing the pressure on Rotterdam’s combined sewer system, since this kind of roofing has the unique capability of retaining precipitation, decreasing the speed of rainwater runoff, and limiting peak discharges.
 
@@ -40,7 +40,7 @@ The approach achieved a 90% precision and 80% recall in a sample of our labeled 
 
 Were this project developed today, I would start by experimenting with Deep Learning approaches, which have since proven themselves to be far superior to tree-based approaches when it comes to image analysis. The vegetated rooftops have a specific kind of vegetation, similar to moss, and our model often wrongly detected normal rooftops with tree canopies overlaying, mostly because of inaccuracies in the GPS coordinates of the polygons. All the experimented approaches struggled with this phenomenon. Given that development of the tool was continued after our proof-of-concept by a team hired by the municipality, it is fair to assume that later iterations include such models as part of the pipeline.
 
-Our initial version of the tool was open sourced under a permissive license @rotterdam.
+Our initial version of the tool was open sourced under a permissive license, and is avaliable on [Github](https://github.com/DSSG-EUROPE/rotterdam).
 
 
 ## Conclusion
