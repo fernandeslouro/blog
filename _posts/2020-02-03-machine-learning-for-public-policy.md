@@ -6,6 +6,8 @@ summary: Options to learn to code online.
 tags: [machine-learning]
 ---
 
+This document, compiled as part of my application to the Eastern European Machine Learning Summer School, includes an overview of my previous work using machine learning approaches to aid in public policy. A description of two projects will be provided, developed for the municipalities of Rotterdam, Netherlands, and Cascais, Portugal. For the Dutch municipality, a tool for the detection and evaluation of upkeep in green rooftops was developed, while for Cascais the project aids in the detection of unlicensed swimming pools. This document will be divided in two parts, describing the approaches to both problems.
+
 # Detection of Green Rooftops in Rotterdam, Netherlands
 
 In the city of Rotterdam, pressure on public space is high due to the population density and the extensive built environment. As a city that is 90% below sea level, a major problem it faces is the threat of floods and storm surges. In the context of storm water management, green rooftops can play a major role in reducing the pressure on Rotterdam’s combined sewer system, since this kind of roofing has the unique capability of retaining precipitation, decreasing the speed of rainwater runoff, and limiting peak discharges.
