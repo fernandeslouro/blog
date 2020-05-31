@@ -20,7 +20,7 @@ We partnered with the Municipality of Rotterdam to increase the use of evidence-
 
 Being developed with the support of the municipality, this project had access to proprietary, governmental data. This included high-definition Color-Infrared (CIR) aerial imagery of an area of interest in Rotterdam, and a file containing polygons outlining each building in the same area. CIR images contain the traditional RGB bands of color images, and an additional band on the near-infrared spectre. The polygons are part of the national building database of the Netherlands, and are normally collected at time of construction. They can be used as a proxy for the outline of each rooftop, and contain additional information such as the year of construction and type of building.
 
-![CIR imagery and corresponding building polygons<span data-label="fig:cir-polygons"></span>](cir-polygons.png){width="0.8linewidth"}
+![CIR imagery and corresponding building polygons.](cir-polygons.png)
 
 ### Approach
 
@@ -31,7 +31,7 @@ $$NDVI = frac{NIR - RED}{NIR + RED}
 
 The NDVI is a simple graphical indicator often used to analyze remote sensing measurements for the existence of live green vegetation. By performing this operation between the near-infrared and the red bands, we obtain an NDVI band, which gives us a gradient of the lushness of the vegetation in the area of interest. By cropping this band in order to consider only the area inside the building polygons, we obtain information about the density of vegetation in each rooftop. Using the NDVI band, descriptive features for the degree of vegetation in each rooftop were designed, in order to train a binary classification model. This model was trained on manually-labeled data, consisting of polygons of some green rooftops known by the municipality and a number of regular rooftops. Our labeled data was unbalanced 10 to 1, in a total of 440 labeled rooftops. We tested the fit of the different estimator objects for our classification model. The selected approach was Logistic Regression, chosen for its combination of simplicity and performance. In addition to the classification for each rooftop, our tool also creates a visualization of the area of interest, outlining the vegetated rooftops.
 
-![Pipeline<span data-label="fig:pipeline"></span>](approach.png){width="linewidth"}
+![Pipeline.](approach.png)
 
 ### Results
 
@@ -54,7 +54,7 @@ This project shares some similarities with the one previously described. Since t
 
 Our approach starts by finding swimming pool ’candidate’ shapes in our RGB imagery. These amount to blobs of the blue color typical of swimming pools found in the aerial image. This was done by setting a threshold on the band obtained by subtracting the values of the red band to the blue band, an approach that showed success in previous work @blue. The pool ’candidates’ correspond to the aggregations of blue color inside a range of sizes. In figure [fig:pool] we can see in yellow an example of a pool ’candidate’.
 
-![A pool ’candidate’<span data-label="fig:pool"></span>](pool.png){width="0.8linewidth"}
+![A pool ’candidate’.](pool.png)
 
 Some of these shapes were labeled by the team, and a classification model was trained on this trained data. Features were extracted both from the ’candidate’ shape and the area around it. The classifications were then crossed with the land parcel polygons. If a shape was classified with high certainty as a swimming pool and was contained in a parcel without any declared pools, a report was generated, aggregating all the images available in the dataset of the parcel, and the location of the swimming pool.
 
