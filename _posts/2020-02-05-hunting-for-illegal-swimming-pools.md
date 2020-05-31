@@ -1,8 +1,6 @@
 ---
 layout: post
-title: Hunting for Illegal Swimming Pools in Cascais, Portugal
-description: This is a one line long test for my first post
-summary: Options to learn to code online.
+title: Hunting for Illegal Swimming Pools
 tags: [machine-learning]
 ---
 
