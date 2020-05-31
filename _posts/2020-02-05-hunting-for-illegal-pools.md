@@ -1,12 +1,10 @@
 ---
 layout: post
-title: Hunting for Illegal Swimming Pools
+title: Hunting for Illegal Swimming Pools in Cascais, Portugal
 description: This is a one line long test for my first post
 summary: Options to learn to code online.
 tags: [machine-learning]
 ---
-
-## Detection of Unlicensed Swimming Pools in Cascais, Portugal
 
 Cascais is a municipality in the Lisbon District of Portugal, located on the Portuguese Riviera. An important tourist destination, the municipality is one of the wealthiest in the Iberian Peninsula. It has one of the most expensive real estate markets and one of the highest costs of living in the country and is consistently ranked highly for its quality of life. A common form of tax evasion in wealthy, sunny areas is to delay the building of swimming pools when constructing new houses until after their evaluation for taxation. The municipality of Cascais set out to end this phenomenon using data-driven approaches.
 
