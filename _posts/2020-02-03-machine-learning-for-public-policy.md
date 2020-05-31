@@ -1,15 +1,12 @@
 ---
 layout: post
-title: Placeholder First Post
+title: Two Machine Learning Projects to Assist in Public Policy
 description: This is a one line long test for my first post
 summary: Options to learn to code online.
 tags: [machine-learning]
 ---
 
-# Two Machine Learning Projects to Assist in Public Policy
-
-
-## Detection of Green Rooftops in Rotterdam, Netherlands
+# Detection of Green Rooftops in Rotterdam, Netherlands
 
 In the city of Rotterdam, pressure on public space is high due to the population density and the extensive built environment. As a city that is 90% below sea level, a major problem it faces is the threat of floods and storm surges. In the context of storm water management, green rooftops can play a major role in reducing the pressure on Rotterdam’s combined sewer system, since this kind of roofing has the unique capability of retaining precipitation, decreasing the speed of rainwater runoff, and limiting peak discharges.
 
@@ -17,13 +14,13 @@ The 14 km$^2$ of flat roofs in the city of Rotterdam have an untapped potential 
 
 We partnered with the Municipality of Rotterdam to increase the use of evidence-based urban planning, specifically for storm water management, by developing a scalable tool that identifies green roofs.
 
-### Data
+## Data
 
 Being developed with the support of the municipality, this project had access to proprietary, governmental data. This included high-definition Color-Infrared (CIR) aerial imagery of an area of interest in Rotterdam, and a file containing polygons outlining each building in the same area. CIR images contain the traditional RGB bands of color images, and an additional band on the near-infrared spectre. The polygons are part of the national building database of the Netherlands, and are normally collected at time of construction. They can be used as a proxy for the outline of each rooftop, and contain additional information such as the year of construction and type of building.
 
 ![CIR imagery and corresponding building polygons<span data-label="fig:cir-polygons"></span>](cir-polygons.png){width="0.8linewidth"}
 
-### Approach
+## Approach
 
 The initial step of our approach was to use the CIR imagery to obtain the Normalized Difference Vegetation Index @ndvi for the whole area of interest, as shown in formula [eq:ndvi].
 
@@ -34,7 +31,7 @@ The NDVI is a simple graphical indicator often used to analyze remote sensing me
 
 ![Pipeline<span data-label="fig:pipeline"></span>](approach.png){width="linewidth"}
 
-### Results
+## Results
 
 
 The approach achieved a 90% precision and 80% recall in a sample of our labeled data used as validation set. It quickly detected other vegetated rooftops across the city, and the provided insights made the tool useful for assistance in public policy. The tool can also provide a quick overview of the city’s rooftops with both number of vegetated roofs and their total relative area.
@@ -43,15 +40,15 @@ Were this project developed today, I would start by experimenting with Deep Lear
 
 Our initial version of the tool was open sourced under a permissive license @rotterdam.
 
-## Detection of Unlicensed Swimming Pools in Cascais, Portugal
+# Detection of Unlicensed Swimming Pools in Cascais, Portugal
 
 Cascais is a municipality in the Lisbon District of Portugal, located on the Portuguese Riviera. An important tourist destination, the municipality is one of the wealthiest in the Iberian Peninsula. It has one of the most expensive real estate markets and one of the highest costs of living in the country and is consistently ranked highly for its quality of life. A common form of tax evasion in wealthy, sunny areas is to delay the building of swimming pools when constructing new houses until after their evaluation for taxation. The municipality of Cascais set out to end this phenomenon using data-driven approaches.
 
-### Data
+## Data
 
 This project shares some similarities with the one previously described. Since the project was developed in collaboration with the municipality, access to proprietary data was offered. We were also provided with high-definition aerial images, but this time only in the RGB bands. Additionally, we had access to polygons outlining the land parcels in which houses and other buildings are contained. These polygons contain information on the existence of a swimming pool inside the land parcel, as well as information about the parcel’s owner.
 
-### Approach
+## Approach
 
 Our approach starts by finding swimming pool ’candidate’ shapes in our RGB imagery. These amount to blobs of the blue color typical of swimming pools found in the aerial image. This was done by setting a threshold on the band obtained by subtracting the values of the red band to the blue band, an approach that showed success in previous work @blue. The pool ’candidates’ correspond to the aggregations of blue color inside a range of sizes. In figure [fig:pool] we can see in yellow an example of a pool ’candidate’.
 
@@ -59,11 +56,11 @@ Our approach starts by finding swimming pool ’candidate’ shapes in our RGB i
 
 Some of these shapes were labeled by the team, and a classification model was trained on this trained data. Features were extracted both from the ’candidate’ shape and the area around it. The classifications were then crossed with the land parcel polygons. If a shape was classified with high certainty as a swimming pool and was contained in a parcel without any declared pools, a report was generated, aggregating all the images available in the dataset of the parcel, and the location of the swimming pool.
 
-### Results
+## Results
 
 As in the previous project, the chosen model was a Logistic Regression, which achieved 90% accuracy in our validation dataset. The initial iteration of the tool provided actionable insights for the municipality. Further action is facilitated by the fact that the tool provides what is in essence a report of tax avoidance with photographic proof. The developed tool also has the benefit of being able to capture new instances of tax avoidance as soon as new imagery is provided. The developed tool is also scalable, and the trained model could be applied to other cities, since most pools have bottoms colored in similar shades of blue, in the range of what is detected by our tool. Due to the nature of this tool, it was not open sourced.
 
-## Conclusion
+# Conclusion
 
 Despite their proof-of-concept status, both these projects have had significant impact. This is due to the fact that they produce actionable insights.
 
