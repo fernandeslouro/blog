@@ -6,6 +6,7 @@ tags: [machine-learning]
 
 This is the second post in a series of two outlining some of my early work applying machine learning approaches to public policy problems. Each post will go over a separate project. You can also read the [first post](http://blog.louro.xyz/2020/02/05/hunting-for-illegal-swimming-pools) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations.
 
+This is the second in a series of two posts on my work applying machine learning approaches to public policy problems.  [first post](http://blog.louro.xyz/2020/02/05/hunting-for-illegal-swimming-pools) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations. Each of the posts goes over a separate project. On this second post, I'll explain our method for detecting swimming pools in aerial images, and how that helped fight tax avoidance.
 
 ***
 
