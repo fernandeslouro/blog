@@ -3,6 +3,9 @@ layout: page
 title: Search
 ---
 
+You can search my posts. Search for machine-learning.
+
+
 <style>
 	#search-container {
 	    max-width: 100%;
