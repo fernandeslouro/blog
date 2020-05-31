@@ -1,3 +1,11 @@
+---
+layout: post
+title: Hunting for Illegal Swimming Pools
+description: This is a one line long test for my first post
+summary: Options to learn to code online.
+tags: [machine-learning]
+---
+
 ## Detection of Unlicensed Swimming Pools in Cascais, Portugal
 
 Cascais is a municipality in the Lisbon District of Portugal, located on the Portuguese Riviera. An important tourist destination, the municipality is one of the wealthiest in the Iberian Peninsula. It has one of the most expensive real estate markets and one of the highest costs of living in the country and is consistently ranked highly for its quality of life. A common form of tax evasion in wealthy, sunny areas is to delay the building of swimming pools when constructing new houses until after their evaluation for taxation. The municipality of Cascais set out to end this phenomenon using data-driven approaches.
@@ -17,3 +25,9 @@ Some of these shapes were labeled by the team, and a classification model was tr
 ### Results
 
 As in the previous project, the chosen model was a Logistic Regression, which achieved 90% accuracy in our validation dataset. The initial iteration of the tool provided actionable insights for the municipality. Further action is facilitated by the fact that the tool provides what is in essence a report of tax avoidance with photographic proof. The developed tool also has the benefit of being able to capture new instances of tax avoidance as soon as new imagery is provided. The developed tool is also scalable, and the trained model could be applied to other cities, since most pools have bottoms colored in similar shades of blue, in the range of what is detected by our tool. Due to the nature of this tool, it was not open sourced.
+
+## Conclusion
+
+Despite their proof-of-concept status, both these projects have had significant impact. This is due to the fact that they produce actionable insights.
+
+It was interesting to note that, despite the simplicity of the models, their performance was enough to make them very useful in assisting public policy. This is partly due to the fact that the features being detected in the images are striking relatively to the rest of the environment, which makes them particularly suitable to this kind of approach.
