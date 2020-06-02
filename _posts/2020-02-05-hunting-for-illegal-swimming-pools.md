@@ -4,7 +4,7 @@ title: Hunting for Illegal Swimming Pools
 tags: [machine-learning]
 ---
 
-This is the second in a series of two posts on my work applying machine learning approaches to public policy problems. You can also read the [first post](http://blog.louro.xyz/2020/02/05/hunting-for-illegal-swimming-pools) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations. Each of the posts goes over a separate project. On this second one, I'll explain our method for detecting swimming pools in aerial images, and how that helped fight tax avoidance.
+This is the second in a series of two posts on my early work applying machine learning approaches to public policy problems. You can also read the [first post](http://blog.louro.xyz/2020/02/03/detecting-green-rooftops-in-rotterdam) or a [pdf version](http://louro.xyz/ml-public-policy.pdf) complete with citations. Each of the posts goes over a separate project. On this second one, I'll explain our method for detecting swimming pools in aerial images, and how that helped fight tax avoidance.
 
 ***
 
@@ -12,13 +12,13 @@ Cascais is a municipality in the Lisbon District of Portugal, located on the Por
 
 # Data
 
-This project shares some similarities with the one previously described. Since the project was developed in collaboration with the municipality, access to proprietary data was offered. We were also provided with high-definition aerial images, but this time only in the RGB bands. Additionally, we had access to polygons outlining the land parcels in which houses and other buildings are contained. These polygons contain information on the existence of a swimming pool inside the land parcel, as well as information about the parcel’s owner.
+This project shares some similarities with the one described in the [previous post](http://blog.louro.xyz/2020/02/03/detecting-green-rooftops-in-rotterdam). Since the project was developed in collaboration with the municipality, access to proprietary data was offered. We were also provided with high-definition aerial images, but this time only in the RGB bands. Additionally, we had access to polygons outlining the land parcels in which houses and other buildings are contained. These polygons contain information on the existence of a swimming pool inside the land parcel, as well as information about the parcel’s owner.
 
 # Approach
 
 Our approach starts by finding swimming pool ’candidate’ shapes in our RGB imagery. These amount to blobs of the blue color typical of swimming pools found in the aerial image. This was done by setting a threshold on the band obtained by subtracting the values of the red band to the blue band, an approach that showed success in previous work @blue. The pool ’candidates’ correspond to the aggregations of blue color inside a range of sizes. In the figure below we can see in yellow an example of a pool ’candidate’.
 
-![A pool ’candidate’.](/assets/images/pool.png =250x)
+<div style="text-align:center; width:250px"><img src="/assets/images/ndvi-equation.png" /></div>
 
 Some of these shapes were labeled by the team, and a classification model was trained on this trained data. Features were extracted both from the ’candidate’ shape and the area around it. The classifications were then crossed with the land parcel polygons. If a shape was classified with high certainty as a swimming pool and was contained in a parcel without any declared pools, a report was generated, aggregating all the images available in the dataset of the parcel, and the location of the swimming pool.
 
