@@ -22,7 +22,7 @@ Being developed with the support of the municipality, this project had access to
 
 ## Approach
 
-The initial step of our approach was to use the CIR imagery to obtain the [Normalized Difference Vegetation Index](https://gisgeography.com/ndvi-normalized-difference-vegetation-index/) for the whole area of interest, as shown in following formula, where _RED_ and _NDVI_ correspond to bands in the CIR imagery (i.e.a matrices).
+The initial step of our approach was to use the CIR imagery to obtain the [Normalized Difference Vegetation Index](https://gisgeography.com/ndvi-normalized-difference-vegetation-index/) for the whole area of interest, as shown in following formula, where _RED_ and _NIR_ correspond to red and near-infrared bands in the CIR imagery (they're matrices).
 
 <div style="text-align:center"><img src="/assets/images/ndvi-equation.png" /></div>
 
