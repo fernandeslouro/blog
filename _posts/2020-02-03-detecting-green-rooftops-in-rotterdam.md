@@ -24,9 +24,7 @@ Being developed with the support of the municipality, this project had access to
 
 The initial step of our approach was to use the CIR imagery to obtain the [Normalized Difference Vegetation Index](https://gisgeography.com/ndvi-normalized-difference-vegetation-index/) for the whole area of interest, as shown in formula [eq:ndvi].
 
-<div>
-{"storage1":"{\"latex_src\":\"NDVI = \\\\frac{NIR - RED}{NIR + RED}\",\"usernote\":\"\"}"}
-<\div>
+![NDVI Formula](/assets/images/ndvi-equation.png)
 
 The NDVI is a simple graphical indicator often used to analyze remote sensing measurements for the existence of live green vegetation. By performing this operation between the near-infrared and the red bands, we obtain an NDVI band, which gives us a gradient of the lushness of the vegetation in the area of interest. By cropping this band in order to consider only the area inside the building polygons, we obtain information about the density of vegetation in each rooftop. Using the NDVI band, descriptive features for the degree of vegetation in each rooftop were designed, in order to train a binary classification model. This model was trained on manually-labeled data, consisting of polygons of some green rooftops known by the municipality and a number of regular rooftops. Our labeled data was unbalanced 10 to 1, in a total of 440 labeled rooftops. We tested the fit of the different estimator objects for our classification model. The selected approach was Logistic Regression, chosen for its combination of simplicity and performance. In addition to the classification for each rooftop, our tool also creates a visualization of the area of interest, outlining the vegetated rooftops.
 
