@@ -18,7 +18,7 @@ This project shares some similarities with the one described in the [previous po
 
 Our approach starts by finding swimming pool ’candidate’ shapes in our RGB imagery. These amount to blobs of the blue color typical of swimming pools found in the aerial image. This was done by setting a threshold on the band obtained by subtracting the values of the red band to the blue band, an approach that showed success in previous work @blue. The pool ’candidates’ correspond to the aggregations of blue color inside a range of sizes. In the figure below we can see in yellow an example of a pool ’candidate’.
 
-<div style="text-align:center; width:250px"><img src="/assets/images/pool.png" /></div>
+<div style="text-align:center; width:400px"><img src="/assets/images/pool.png" /></div>
 
 Some of these shapes were labeled by the team, and a classification model was trained on this trained data. Features were extracted both from the ’candidate’ shape and the area around it. The classifications were then crossed with the land parcel polygons. If a shape was classified with high certainty as a swimming pool and was contained in a parcel without any declared pools, a report was generated, aggregating all the images available in the dataset of the parcel, and the location of the swimming pool.
 
@@ -31,3 +31,5 @@ As in the previous project, the chosen model was a Logistic Regression, which ac
 Despite their proof-of-concept status, both these projects have had significant impact. This is due to the fact that they produce actionable insights.
 
 It was interesting to note that, despite the simplicity of the models, their performance was enough to make them very useful in assisting public policy. This is partly due to the fact that the features being detected in the images are striking relatively to the rest of the environment, which makes them particularly suitable to this kind of approach.
+
+**Note:** This project was developed in partnership with the [Municipality of Cascais](https://www.cascais.pt/) under a [Data Science for Social Good Europe](http://www.dssgfellowship.org/europe/) initiative.
