@@ -46,3 +46,6 @@ Despite its proof-of-concept status, this projects had a significant impact for 
 It was interesting to note that, despite the simplicity of the models, their performance was enough to make them very useful in assisting public policy. This is partly due to the fact that the features being detected in the images are striking relatively to the rest of the environment, which makes them particularly suitable to this kind of approach.
 
 This work was my introduction to the area of machine learning, which has since become my area of occupation. With this project, I became deeply aware of the power of these techniques when applied to the right problem, and the transformative power they can have in society.
+
+**Note:** This project was developed in partnership with the [Municipality of Rotterdam](https://www.rotterdam.nl/english/) as part of [The University of Chicago Data Science for Social Good](http://www.dssgfellowship.org/europe/) Fellowship. Check out the [project website](http://www.dssgfellowship.org/project/identifying-rooftop-usage-in-rotterdam/).
+
