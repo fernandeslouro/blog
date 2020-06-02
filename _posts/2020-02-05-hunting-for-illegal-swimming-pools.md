@@ -28,8 +28,6 @@ As in the previous project, the chosen model was a Logistic Regression, which ac
 
 # Conclusion
 
-Despite their proof-of-concept status, both these projects have had significant impact. This is due to the fact that they produce actionable insights.
-
-It was interesting to note that, despite the simplicity of the models, their performance was enough to make them very useful in assisting public policy. This is partly due to the fact that the features being detected in the images are striking relatively to the rest of the environment, which makes them particularly suitable to this kind of approach.
+As in the previous project, this work provided actionable insights to public officials. The tool is still in use by the municipality, and has contributed to reductions in tax evasion. It was interesting to note that, even with a simple model, detection of swimming pools in aerial images with good performance is an achievable task. After all, there aren't a lot of things that are light blue when seen from the sky :). Our model also did a good job at not flagging blue cars, which was a problem in the earliest iterations.
 
 **Note:** This project was developed in partnership with the [Municipality of Cascais](https://www.cascais.pt/) under a [Data Science for Social Good Europe](http://www.dssgfellowship.org/europe/) initiative.
