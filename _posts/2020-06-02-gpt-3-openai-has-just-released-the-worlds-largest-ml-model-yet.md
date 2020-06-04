@@ -4,7 +4,7 @@ title: GPT-3&#58; OpenAI has just released the world's largest ML model (yet)
 tags: [machine-learning]
 ---
 
-OpenAI has just released the largest ML model yet. It's larger by an order of magnitude than the previous record holder. This new model, sensibly named GPT-3 (short for Generative Pretrained Transformer 3) has 175 million parameters, surpassing Microsoft's Turing-NLG with its 17 billion parameters. 
+OpenAI has just released the largest ML model yet. It's larger by an order of magnitude than the previous record holder. This new model, sensibly named GPT-3 (short for Generative Pretrained Transformer 3) has 175 million parameters, surpassing Microsoft's Turing-NLG with its 17 billion parameters. Below you can see a plot of several language models, which Microsoft compiled for their [announcement](https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/) for Turing-NLG. You can also see in the graph where GPT-2 stands, as well as [MegatronLM](https://nv-adlr.github.io/MegatronLM) named like that because it was the "biggest, baddest" transformer of its day. GPT-3 would blow up the scale. 
 
 ![Number of parameters of preious language models](/assets/images/transformer-parameters.png)
 
