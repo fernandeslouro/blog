@@ -6,7 +6,7 @@ tags: [machine-learning]
 
 OpenAI has just released the largest ML model yet. It's larger by an order of magnitude than the previous record holder. This new model, sensibly named GPT-3 (short for Generative Pretrained Transformer 3) has 175 million parameters, surpassing Microsoft's Turing-NLG with its 17 billion parameters. 
 
-![Number of parameters of preious language models]('/assets/images/transformer-parameters.png')
+![Number of parameters of preious language models](/assets/images/transformer-parameters.png)
 
 The chief scientist of OpenAI, Ilya Sutskever, presented on an interview for the [Artificial Intelligence](https://www.youtube.com/watch?v=13CZPWmke6A&list=PLrAXtmErZgOdP_8GztsuKi9nrraNbKKp4) podcast a simple intuition on why language models need to be large in order to be good:
 
