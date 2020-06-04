@@ -1,6 +1,6 @@
 ---
 layout: post
-'title: GPT-3: OpenAI has just released the world's largest ML model (yet)'
+'Title: GPT-3: OpenAI has just released the world's largest ML model (yet)'
 tags: [machine-learning]
 ---
 
