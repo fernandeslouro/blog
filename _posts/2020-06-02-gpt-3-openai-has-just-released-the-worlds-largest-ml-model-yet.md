@@ -14,4 +14,17 @@ The chief scientist of OpenAI, Ilya Sutskever, presented on an interview for the
 
 After being debuted on a 2017 [paper on machine translation](https://arxiv.org/abs/1706.03762) the Transformer architecture has revolutionized the field of NLP. The previous state-of-the-art in language models, Recurrent Neural Networks (specifically LSTMs), while showing potential, was severely limited by its recurrent nature, in the sense that it was not parallelizable. The Transformer, with its attention mechanism, presented a solution to this lack of paralellization. This may have been its greatest breakthrough.
 
-Since thi
+# Language Model as Few-Shot Learner
+
+Perhaps the most surprising new capability of GPT-3 is the fact that it managed to beat the state-of-the art in some NLP tasks with no fine-tuning. Previous language models have shown great capabilities in a number of tasks, like question answering or text summariation. However, in order to perform these tasks (which are different from the normal text generation language models are trained to do) the models must be fine-tuned specifically for each individual task. This requires having training and test datasets for the new task, as well as additional compute.
+
+In the paper, no fine-tuning was performed on GPT-3. However, three different situations were esperimented: **no-shot**, **single-show** and **few-shot** learning.
+
+(Insert image from paper)
+
+As you can see, the task settings are provided to the language model simply as sentences for it to complete, with no gradient updates whatsoever. In the zero-shot setting, only a description of the task is provided. In the single-shot setting, the model is provided with a simple example of the task to perform (in the case of English to French translation, this single example is an English-French pair. For the few-shot setting, several examples of the solved task are provided, as part of the expression the language model must complete. Using this few-shot method of understanding tasks, GPT-3 managed to break the state-of-the-art in several different tasks, surpassing previous models, which ad been fine-tuned for those specific tasks. 
+
+# Can a better language model be built by increasing size?
+
+As for the experimental resutls on language modelling, it has been verified that as the number of parameters increased, the validation loss (calculaing used log probability, a.k.a. perplexity) for trained models decreased. This matches previous knowledge, that as model size, compute time and dataset size increase in the same fashion, it follows a powe law where the model will get better and better. A question still to be ansered is: __how far can this take us?__ It seems like, at 175B parameters, the limit hasn't yet been discovered, since GPT-3 is still in this trend of improvement.
+
