@@ -14,6 +14,10 @@ The chief scientist of OpenAI, Ilya Sutskever, presented on an interview for the
 
 After being debuted on a 2017 [paper on machine translation](https://arxiv.org/abs/1706.03762) the Transformer architecture has revolutionized the field of NLP. The previous state-of-the-art in language models, Recurrent Neural Networks (specifically LSTMs), while showing potential, was severely limited by its recurrent nature, in the sense that it was not parallelizable. The Transformer, with its attention mechanism, presented a solution to this lack of paralellization. This may have been its greatest breakthrough.
 
+# Arctecture of GPT-3
+
+As for the architecture, there is nothing too new here, since it's essentially the same as the previous GPT-2, though much larger. For a detailed description of the GPT-2 architecture, check out Jay Alammar's fantastic post [The Illustrated GPT-2](http://jalammar.github.io/illustrated-gpt2/). Remember, GPT-2 was said to be "too dangerous for he world" at the time of its release. It only has 1.3 billion parameters, a very small number when compared to the 175 billion of GPT-3.
+
 # Language Model as Few-Shot Learner
 
 Perhaps the most surprising new capability of GPT-3 is the fact that it managed to beat the state-of-the art in some NLP tasks with no fine-tuning. Previous language models have shown great capabilities in a number of tasks, like question answering or text summariation. However, in order to perform these tasks (which are different from the normal text generation language models are trained to do) the models must be fine-tuned specifically for each individual task. This requires having training and test datasets for the new task, as well as additional compute.
@@ -26,5 +30,21 @@ As you can see, the task settings are provided to the language model simply as s
 
 # Can a better language model be built by increasing size?
 
-As for the experimental resutls on language modelling, it has been verified that as the number of parameters increased, the validation loss (calculaing used log probability, a.k.a. perplexity) for trained models decreased. This matches previous knowledge, that as model size, compute time and dataset size increase in the same fashion, it follows a powe law where the model will get better and better. A question still to be ansered is: __how far can this take us?__ It seems like, at 175B parameters, the limit hasn't yet been discovered, since GPT-3 is still in this trend of improvement.
+As for the experimental resutls on language modelling, it has been verified by past experiments that as the number of parameters is increased, the validation loss (calculaing used log probability, a.k.a. perplexity) for trained models decreases. Essentialy,k as model size, compute time and dataset size increase in the same fashion, it follows a powe law where the model will get better and better. A question still to be ansered is: _how far can this take us?_ It seems like, at 175B parameters, the limit hasn't yet been discovered, since GPT-3 is still in this trend of improvement.
+
+Question Answering
+Translation
+Winograd Schemes
+Commonsense Reasoning
+Reading Comprehension
+SuperGLUE
+NLI
+Arithmetic Expressions
+Word Unscrambling
+SAT Analogies
+News Article Generation
+Made-up Words
+Training Set Contamination
+Task Examples
+
 
