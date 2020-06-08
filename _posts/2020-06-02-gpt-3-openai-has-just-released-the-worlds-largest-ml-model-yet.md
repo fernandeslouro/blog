@@ -36,14 +36,14 @@ As for the experimental resutls on language modelling, it has been verified by p
 
 Either you get a question, or context + a question. The model should either simply answer the question or choose from several options which one is the most likely to be correct. For GPT-3, as the model scaled up in number of parameters, the zero-shot, one-shot and few-shot (with 64 different examples) variants. In these tasks, the model can not query any outside information, we simply want to know information that is encodeed in the model's 175B parameters. In some of these question answering tasks, GPT-3 managed to outperform a fine-tuned SOTA model in both the one-shot and few-shot settings. Another interesting point is that some of the SOTA models Open Domain (vs. Closed Book) which means that they can access websites like Wikipedia. The question-answering tasks where GPT-3 cound't beat the SOTA (e.g. NaturalQS) were tasks that depended mostly on factual knowledge, where open domain models have the advantage.
 
-![Question Answering](/assets/images/question-answering.png)
+![Question Answering](/assets/images/question-answering.PNG)
 
 # Translation
 
 For tasks in translation, the performance also increases with the number of parameters. In translation tasks, GPT-3 showed the best performance when translating into English, be it in no-shot, one-shot, or few shot settings. This makes sense, considering most of the corpus the model trained on was in English, and GPT-3 was intended from the start to be an English language model. The performance when translating from Eglish to other languages is therefore not as good. When translating from other languages into English, the model maintains similar perfrmance across languages, but that is not the case when translating from English into other languages, in which case the performance varies significantly across output languages. In some cases, GPT-3 managed to improve on the current supervised SOTA when translating into English.
 
 
-![Translation](/assets/images/translation.png)
+![Translation](/assets/images/translation.PNG)
 
 # Winograd Schemes
 
