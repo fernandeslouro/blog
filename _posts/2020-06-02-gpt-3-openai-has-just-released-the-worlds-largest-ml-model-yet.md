@@ -4,7 +4,7 @@ title: GPT-3&#58; OpenAI has just released the world's largest ML model (yet)
 tags: [machine-learning]
 ---
 
-OpenAI has just released the largest ML model yet. It's larger by an order of magnitude than the previous record holder. This new model, sensibly named GPT-3 (short for Generative Pretrained Transformer 3) has 175 million parameters, surpassing Microsoft's Turing-NLG with its 17 billion parameters. Below you can see a plot of several language models, which Microsoft compiled for their [announcement](https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/) for Turing-NLG. You can also see in the graph where GPT-2 stands, as well as [MegatronLM](https://nv-adlr.github.io/MegatronLM) named like that because it was the "biggest, baddest" transformer of its day. GPT-3 would blow up the scale. 
+OpenAI has just released the largest ML model yet. It's larger by an order of magnitude than the previous record holder. This new model, sensibly named GPT-3 (short for Generative Pretrained Transformer 3) has 175 million parameters, surpassing Microsoft's Turing-NLG with its 17 billion parameters. Below you can see a plot of several language models, which Microsoft compiled for their [announcement](https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/) for Turing-NLG. You can also see in the graph where GPT-2 stands, as well as [MegatronLM](https://nv-adlr.github.io/MegatronLM) named like that because it was the "biggest, baddest transformer" of its day. GPT-3 would blow up the scale. 
 
 ![Number of parameters of preious language models](/assets/images/transformer-parameters.png)
 
@@ -47,12 +47,31 @@ For tasks in translation, the performance also increases with the number of para
 
 # Winograd Schemes
 
+Winograd is a classic task in NLP, which involves figuring out which word a pronounrefers to, in cases when the pronoun is grammatically ambiguous but semantically unambiguous to a human. In some Winograd-Style tasks, GPT-3 managed to beat the fine-tuned SOTA performance in all its three settings (even no-shot), while for others it comes close. In earlier Winograd-Style tasks, the SOTA is close to human performance, while for newer, more adversarial tasks, there is still some distance between the current best performance and humans. In more adversarial tasks, there were bigger differences between no-shot and few-shot perfomance for GPT-3.
 
-Commonsense Reasoning
+# Commonsense Reasoning
+
+Several tasks were tried in order to evaluate GPT-3's capacity for reasoning. The three analysed datasets attempt to capture physical or scientific reasoning. They are not tasks of sentence completion, reading comprehension, or broad knowledge question answering. In one of the tasks (PIQA, comprising common sense questions about the physical world, which tries to evaluate for a grounded understanding of the world) GPT-3 in the no-shot setting managed to beat the current fine-tuned SOTA, while for the other two it didn't. However, in the case of the PIQA dataset, the authors claimed that there is possible contamination in this dataset, meaning that a portion of this dataset might be in the training dataset of GPT-3. This was only noticed after the training, 
+
 # Reading Comprehension
+
+To test GPT-3's reading comprehension, 5 datasets were used, which include abstractive, multiple choice, and span based answer formats in both dialog and single question settings. GPT-3 couldn't beat the fine-tuned SOTA in any of these tasks, and performance varied across datasets.
+
 SuperGLUE
 NLI
-# Arithmetic Expressions
+
+# Synthetic Datasets
+
+Given the way that GPT-3 is tested (simply giving it some text to complete) it's easy to devise new tasks for it to solve. No training datasets are required, since there is no fine-tuning, which is an advantage that comes from performing no fine-tuning. In order to evaluate GPT-3 further, OpenAI devised some additional tasks, and it intends to relase the test datasets soon. 
+
+## Arithmetic Expressions
+
+It turns out that GPT-3 is quite good at arithmetics, especially in two-digit addition and subtraction, which it's able to consistently perform. Three digit addition and subtraction is also surprising, with over 80 and 90% accuracy respectively. Keep in mind that GPT-3 is a language model, not a calculator, and these results start to appear quite good. Results for arithmetics above three digits and for multiplication were not as good. As can be seen in the image, arithmetics is a capability only shown by very large models.
+
+One-shot and zero-shot performance are somewhat degraded relative to few-shot performance, suggesting that adaptationto the task (or at the very least recognition of the task) is important to performing these computations correctly.Nevertheless, one-shot performance is still quite strong, and even zero-shot performance of the full GPT-3 significantly outperforms few-shot learning for all smaller models.
+
+![Arithmetic](/assets/images/arithmetic.PNG)
+
 Word Unscrambling
 # SAT Analogies
 # News Article Generation
