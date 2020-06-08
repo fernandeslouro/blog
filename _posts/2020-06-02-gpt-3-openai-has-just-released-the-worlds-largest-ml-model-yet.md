@@ -30,21 +30,34 @@ As you can see, the task settings are provided to the language model simply as s
 
 # Can a better language model be built by increasing size?
 
-As for the experimental resutls on language modelling, it has been verified by past experiments that as the number of parameters is increased, the validation loss (calculaing used log probability, a.k.a. perplexity) for trained models decreases. Essentialy,k as model size, compute time and dataset size increase in the same fashion, it follows a powe law where the model will get better and better. A question still to be ansered is: _how far can this take us?_ It seems like, at 175B parameters, the limit hasn't yet been discovered, since GPT-3 is still in this trend of improvement.
+As for the experimental resutls on language modelling, it has been verified by past experiments that as the number of parameters is increased, the validation loss (calculaing used log probability, a.k.a. perplexity) for trained models decreases. Essentialy, as model size, compute time and dataset size increase in the same fashion, it follows a powe law where the model will get better and better. A question still to be ansered is: _how far can this take us?_ It seems like, at 175B parameters, the limit hasn't yet been discovered, since GPT-3 is still in this trend of improvement.
 
-Question Answering
-Translation
-Winograd Schemes
+# Question Answering
+
+Either you get a question, or context + a question. The model should either simply answer the question or choose from several options which one is the most likely to be correct. For GPT-3, as the model scaled up in number of parameters, the zero-shot, one-shot and few-shot (with 64 different examples) variants. In these tasks, the model can not query any outside information, we simply want to know information that is encodeed in the model's 175B parameters. In some of these question answering tasks, GPT-3 managed to outperform a fine-tuned SOTA model in both the one-shot and few-shot settings. Another interesting point is that some of the SOTA models Open Domain (vs. Closed Book) which means that they can access websites like Wikipedia. The question-answering tasks where GPT-3 cound't beat the SOTA (e.g. NaturalQS) were tasks that depended mostly on factual knowledge, where open domain models have the advantage.
+
+![Question Answering](/assets/images/question-answering.png)
+
+# Translation
+
+For tasks in translation, the performance also increases with the number of parameters. In translation tasks, GPT-3 showed the best performance when translating into English, be it in no-shot, one-shot, or few shot settings. This makes sense, considering most of the corpus the model trained on was in English, and GPT-3 was intended from the start to be an English language model. The performance when translating from Eglish to other languages is therefore not as good. When translating from other languages into English, the model maintains similar perfrmance across languages, but that is not the case when translating from English into other languages, in which case the performance varies significantly across output languages. In some cases, GPT-3 managed to improve on the current supervised SOTA when translating into English.
+
+
+![Translation](/assets/images/translation.png)
+
+# Winograd Schemes
+
+
 Commonsense Reasoning
-Reading Comprehension
+# Reading Comprehension
 SuperGLUE
 NLI
-Arithmetic Expressions
+# Arithmetic Expressions
 Word Unscrambling
-SAT Analogies
-News Article Generation
-Made-up Words
-Training Set Contamination
+# SAT Analogies
+# News Article Generation
+# Made-up Words
+# Training Set Contamination
 Task Examples
 
 
