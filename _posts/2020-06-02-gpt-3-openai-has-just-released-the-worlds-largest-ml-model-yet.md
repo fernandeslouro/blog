@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GPT-3&#58; OpenAI has just released the world's largest ML model (yet)
+title: GPT-3 -  OpenAI has just released the world's largest ML model (yet)
 tags: [machine-learning]
 ---
 
@@ -24,7 +24,7 @@ Perhaps the most surprising new capability of GPT-3 is the fact that it managed 
 
 In the paper, no fine-tuning was performed on GPT-3. However, three different situations were esperimented: **no-shot**, **single-show** and **few-shot** learning.
 
-(Insert image from paper)
+![GPT-3 Settings](/assets/images/settings.png)
 
 As you can see, the task settings are provided to the language model simply as sentences for it to complete, with no gradient updates whatsoever. In the zero-shot setting, only a description of the task is provided. In the single-shot setting, the model is provided with a simple example of the task to perform (in the case of English to French translation, this single example is an English-French pair. For the few-shot setting, several examples of the solved task are provided, as part of the expression the language model must complete. Using this few-shot method of understanding tasks, GPT-3 managed to break the state-of-the-art in several different tasks, surpassing previous models, which ad been fine-tuned for those specific tasks. 
 
@@ -73,9 +73,20 @@ One-shot and zero-shot performance are somewhat degraded relative to few-shot pe
 ![Arithmetic](/assets/images/arithmetic.PNG)
 
 Word Unscrambling
+
 # SAT Analogies
+
+Another task OpenAI came up with to test GPT-3 were SAT questions. The specific questions chosen were the analogy problems, which are multiple choice. Questions of this kind were present on the SAT (the exam Americans have to take to attend university) before 2005.
+
+> A typical example is “audacious is to boldness as (a) sanctimonious is tohypocrisy, (b) anonymous is to identity, (c) remorseful is to misdeed, (d) deleterious is to result, (e) impressionable is totemptation”. The student is expected to choose which of the five word pairs has the same relationship as the originalword pair; in this example the answer is “sanctimonious is to hypocrisy”. 
+
+It's interesting that GPT-3 managed to beat the average among college applicants in both the one-shot and few-shot settings. The college applicants' average was 57%, while GPT-3 scored 62.5%, 59.1% and 53.7% in its few-shot, one-shot and no-shot settings, respectively.
+
 # News Article Generation
+
 # Made-up Words
+
+
 # Training Set Contamination
 Task Examples
 
