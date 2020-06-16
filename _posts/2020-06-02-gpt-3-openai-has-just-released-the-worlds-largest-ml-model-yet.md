@@ -4,11 +4,15 @@ title: A look at the OpenAI's GTP-3 paper
 tags: [machine-learning]
 ---
 
-OpenAI has just released the largest ML model yet, larger by an order of magnitude than the previous record holder. This new model, sensibly named GPT-3 (short for Generative Pretrained Transformer 3) has 175 million parameters, surpassing Microsoft's Turing-NLG with its 17 billion parameters. According to [Lambda Labs](https://lambdalabs.com/blog/demystifying-gpt-3/), a cloud provider, GPT-3 would take 355 to train on a Tesla V100, the fastest GPU on the market, and would cost $4,600,000 to train on their platform (which they claim has the cheapest rates offered for cloud computing). Below you can see a plot of several language models, which Microsoft compiled for their [announcement](https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/) for Turing-NLG, the previous largest language model. You can also see in the graph where GPT-2 stands, as well as Nvidia's [MegatronLM](https://nv-adlr.github.io/MegatronLM) named like that because it was the "biggest, baddest transformer" of its day. GPT-3 would blow up the scale. 
+OpenAI has just released the largest ML model yet, larger by an order of magnitude than the previous record holder. This new model, sensibly named GPT-3 (short for Generative Pretrained Transformer 3) has 175 billion parameters, surpassing Microsoft's Turing-NLG with its 17 billion parameters. 
+
+According to [Lambda Labs](https://lambdalabs.com/blog/demystifying-gpt-3/), a cloud provider, GPT-3 would take 355 years to train on a Tesla V100, the fastest GPU on the market, and would cost $4,600,000 to train on their platform (which they claim has the cheapest rates offered for cloud computing). 
+
+Below you can see a plot comparing the number of parameters for several language models, which Microsoft compiled for their [announcement](https://www.microsoft.com/en-us/research/blog/turing-nlg-a-17-billion-parameter-language-model-by-microsoft/) for Turing-NLG, the previous largest language model. You can also see in the graph where GPT-2 stands, as well as Nvidia's [MegatronLM](https://nv-adlr.github.io/MegatronLM) named like that because it was the "biggest, baddest transformer" of its day. GPT-3 would blow up the scale. 
 
 ![Number of parameters of preious language models](/assets/images/transformer-parameters.png)
 
-The chief scientist of OpenAI, Ilya Sutskever, presented on an interview for the [Artificial Intelligence](https://www.youtube.com/watch?v=13CZPWmke6A&list=PLrAXtmErZgOdP_8GztsuKi9nrraNbKKp4) podcast a simple intuition on why language models need to be large in order to be good:
+The chief scientist of OpenAI, Ilya Sutskever, presented on an interview for Lex Fridman's [Artificial Intelligence](https://www.youtube.com/watch?v=13CZPWmke6A&list=PLrAXtmErZgOdP_8GztsuKi9nrraNbKKp4) podcast a simple intuition on why language models need to be large in order to be good:
 
 > In order to predict the next word, when you don't know anything, you'll notice very broad strokes, surface level patterns, like... sometimes there are characters and there is space between those characters, you'll notice that sometimes there is a comma and the next character is a capital letter. Eventually you may start to notice that certain words occur often, you may notice spelling and syntax. And when you get really good at all these, you start to notice the semantics. You start to notice the facts. But for that to happen, the language model needs to be larger.
 
@@ -18,7 +22,7 @@ In this post, we'll be taking a look at the recently released paper for GPT-3. M
 
 # Architecture of GPT-3
 
-As for the architecture, there is nothing too new here, since it's essentially the same as the previous GPT-2, though much larger. For a detailed description of the GPT-2 architecture, check out Jay Alammar's fantastic post [The Illustrated GPT-2](http://jalammar.github.io/illustrated-gpt2/). Remember, GPT-2 was said to be "too dangerous for the world" at the time of its release. It only has 1.3 billion parameters, a very small number when compared to the 175 billion of GPT-3.
+As for the architecture, there is nothing too new here, since it's essentially the same as the previous GPT-2, though much larger. For a detailed description of the GPT-2 architecture, check out Jay Alammar's fantastic post [The Illustrated GPT-2](http://jalammar.github.io/illustrated-gpt2/). Remember, GPT-2 was said to be "too dangerous for the world" at the time of its release. It only has 1.3 billion parameters, a very small number when compared to the 175 billion of GPT-3. The point of GPT-3 is not to experiment with a fancy new architecture, but to go big.
 
 # Language Model as Few-Shot Learner
 
@@ -34,11 +38,7 @@ As you can see, the task settings are provided to the language model simply as s
 
 As for the experimental results on language modelling, it has been verified by past experiments that as the number of parameters is increased, the validation loss (calculated used log probability, a.k.a. perplexity) for trained models decreases. Essentially, as model size, compute time and dataset size increase in the same fashion, it follows a power law where the model will get better and better. A question still to be answered is: _how far can this take us?_ It seems like, at 175B parameters, the limit hasn't yet been discovered, since GPT-3 is still in this trend of improvement.
 
-# Analysis of Resuls
-
-I'll now go over some interesting results from the paper. I'll describe the results I found most interesting (which are most of the experimental results) but there are a few that I'll leave out so that the post doesn't become too long.
-
-## Question Answering
+# Analysis of Results
 
 Either you get a question, or context + a question. The model should either simply answer the question or choose from several options which one is the most likely to be correct. For GPT-3, as the model scaled up in number of parameters, the zero-shot, one-shot and few-shot (with 64 different examples) variants. In these tasks, the model can not query any outside information, we simply want to know information that is encoded in the model's 175B parameters. In some of these question answering tasks, GPT-3 managed to outperform a fine-tuned SOTA model in both the one-shot and few-shot settings. Another interesting point is that some of the SOTA models Open Domain (vs. Closed Book) which means that they can access websites like Wikipedia. The question-answering tasks where GPT-3 couldn't beat the SOTA (e.g. NaturalQS) were tasks that depended mostly on factual knowledge, where open domain models have the advantage.
 
