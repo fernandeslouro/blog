@@ -110,7 +110,7 @@ For each model, 80 participants tried to discern the source of news articles, so
 
 As for results, GPT-3 is excellent at generating realistic news articles. While mean human accuracy (the ratio of correct assignments to non-neutral assignments per participant) for the "control model" was ~86%, and chance would be 50%, humans managed to discern GPT-3's articles from real ones at ~52%, which is barely above chance. Past work had pointed that humans tended to discern generated articles more accurately if they were longer. In order to test this, a second, similar test was set up, in which the articles were ~500 words long (in the first test they were ~200 words long). Even with longer articles, mean human accuracy was still ~52% for the GPT-3 articles. 
 
-Below you can see the article which humans found the easiest to distinguish from a human written article. It provides factually wrong information (e.g. Megyn Kelly does not host The Tonight Show, and this interaction between high-profile celebrities never happened). It's also quite a bizarre, funny read. Nonetheless, it is correct syntactically, and coherence is maintained across the article.
+Below you can see the article which humans found the easiest to distinguish from a human written article. It provides factually wrong information (e.g. Megyn Kelly does not host The Tonight Show, and this interaction between high-profile celebrities never happened). It's also quite a bizarre, funny read. Nonetheless, it is correct syntactically, and some coherence is maintained across the article.
 
 ![Most easily discernible generated article](/assets/images/worst-generated.png)
 
