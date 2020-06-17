@@ -89,12 +89,12 @@ One-shot and zero-shot performance are somewhat degraded relative to few-shot pe
 
 Another task OpenAI came up with to test GPT-3 were SAT questions. The specific questions chosen were the analogy problems, which are multiple choice. Questions of this kind were present on the SAT (the exam Americans have to take to attend university) before 2005.
 
-`A typical example is: Audacious is to boldness as 
+```A typical example is: Audacious is to boldness as 
  - (a) sanctimonious is to hypocrisy, 
  - (b) anonymous is to identity, 
  - (c) remorseful is to misdeed, 
  - (d) deleterious is to result, 
- - (e) impressionable is to temptation.`
+ - (e) impressionable is to temptation.```
 
 The student is expected to choose which of the five word pairs has the same relationship as the original word pair. In the previous example the answer is “sanctimonious is to hypocrisy”. 
 
