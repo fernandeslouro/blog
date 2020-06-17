@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A look at the OpenAI's GTP-3 paper
+title: Paper Review - "Language Models are Few-Shot Learners" (OpenAI's GPT-3 paper) 
 tags: [machine-learning]
 ---
 
