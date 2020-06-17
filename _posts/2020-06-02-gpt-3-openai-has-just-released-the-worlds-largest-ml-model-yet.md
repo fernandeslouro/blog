@@ -32,7 +32,7 @@ In the paper, no fine-tuning was performed on GPT-3. However, three different si
 
 ![GPT-3 Settings](/assets/images/settings.png)
 
-As you can see, the task settings are provided to the language model simply as sentences for it to complete, with no gradient updates whatsoever. In the zero-shot setting, only a description of the task is provided. In the single-shot setting, the model is provided with a simple example of the task to perform (in the case of English to French translation, this single example is an English-French pair. For the few-shot setting, several examples of the solved task are provided, as part of the expression the language model must complete. Using this few-shot method of understanding tasks, GPT-3 managed to break the state-of-the-art in several different tasks, surpassing previous models, which had been fine-tuned for those specific tasks. 
+As you can see, the task settings are provided to the language model simply as sentences for it to complete, with no gradient updates whatsoever. In the zero-shot setting, only a description of the task is provided. In the single-shot setting, the model is provided with a simple example of the task to perform (in the case of English to French translation, this single example is an English-French pair). For the few-shot setting, several examples of the solved task are provided, as part of the expression the language model must complete. Using this few-shot method of understanding tasks, GPT-3 managed to break the state-of-the-art in several different tasks, surpassing previous models, which had been fine-tuned for those specific tasks. 
 
 # So how good a language model is it?
 
@@ -47,7 +47,7 @@ In this section, we'll go over some of the results I found the most interesting 
 
 ## Question Answering
 
-The first task OpenAI analyses in the paper is question answering. In this test, GPT-3 either gets a question, or context followed a question. The model should either simply answer the question or choose from several options which one is the most likely to be correct. In these tasks, the model can not query any outside information, we simply want to know information that is encoded in the model's 175B parameters. In some of these question answering tasks, GPT-3 managed to outperform a fine-tuned SOTA model in both the one-shot and few-shot settings. Another interesting point is that some of the SOTA models are Open Domain (vs. Closed Book) which means that they can access websites like Wikipedia. The question-answering tasks where GPT-3 couldn't beat the SOTA (e.g. NaturalQS) were tasks that depended mostly on factual knowledge, where open domain models have the advantage.
+The first task OpenAI analyses in the paper is question answering. In this test, GPT-3 either gets a question, or context followed by a question. The model should either simply answer the question or choose from several options which one is the most likely to be correct. In these tasks, the model can not query any outside information, we simply want to know the information that is encoded in the model's 175B parameters. In some of these question answering tasks, GPT-3 managed to outperform a fine-tuned SOTA model in both the one-shot and few-shot settings. Another interesting point is that some of the SOTA models are Open Domain (vs. Closed Book) which means that they can access websites like Wikipedia. The question-answering tasks where GPT-3 couldn't beat the SOTA (e.g. NaturalQS) were tasks that depended mostly on factual knowledge, where open domain models have the advantage.
 
 Note how the performance in a question answering task increases with the number of parameters. This makes sense intuitively, since a larger number of parameters allows for the encoding of more information.
 
@@ -55,14 +55,16 @@ Note how the performance in a question answering task increases with the number 
 
 ## Translation
 
-For tasks in translation, the performance also increases with the number of parameters. In translation tasks, GPT-3 showed its best performance when translating __into__ English, be it in no-shot, one-shot, or few shot settings. This makes sense, considering most of the corpus the model trained on was in English, and GPT-3 was intended from the start to be an English language model. The performance when translating __from__ English to other languages is therefore not as good. When translating from other languages into English, the model maintains similar performance across languages, but that is not the case when translating from English into other languages, in which case the performance varies significantly across output languages. In some cases, GPT-3 managed to improve on the current supervised SOTA when translating into English.
+For tasks in translation, the performance also increases with the number of parameters. In translation tasks, GPT-3 showed its best performance when translating _into_ English, be it in no-shot, one-shot, or few shot settings. This makes sense, considering most of the corpus the model trained on was in English, and GPT-3 was intended from the start to be an English language model. The performance when translating _from_ English to other languages is therefore not as good. When translating from other languages into English, the model maintains similar performance across languages, but that is not the case when translating from English into other languages, in which case the performance varies significantly across output languages. In some cases, GPT-3 managed to improve on the current supervised SOTA when translating into English.
 
 
 ![Translation](/assets/images/translation.PNG)
 
 ## Winograd Schemes
 
-Winograd is a classic task in NLP, which involves figuring out which word a pronoun refers to, in cases when the pronoun is grammatically ambiguous but semantically unambiguous to a human. In some Winograd-Style tasks, GPT-3 managed to beat the fine-tuned SOTA performance in all its three settings (even no-shot), while for others it comes close. In earlier Winograd-Style tasks, the SOTA is close to human performance, while for newer, more adversarial tasks, there is still some distance between the current best performance and humans. In more adversarial tasks, there were bigger differences between no-shot and few-shot performance for GPT-3.
+Winograd is a classic task in NLP, which involves figuring out which word a pronoun refers to, in cases when the pronoun is grammatically ambiguous but semantically unambiguous to a human. In some Winograd-Style tasks, GPT-3 managed to beat the fine-tuned SOTA performance in all its three settings (even no-shot), while for others it comes close. 
+
+In earlier Winograd-Style tasks, the SOTA is close to human performance, while for newer, more adversarial tasks, there is still some distance between the current best AI performance and humans. In more adversarial tasks, there were bigger differences between no-shot and few-shot performance for GPT-3.
 
 ## Commonsense Reasoning
 
@@ -74,7 +76,7 @@ To test GPT-3's reading comprehension, 5 datasets were used, which include abstr
 
 ## Synthetic Datasets
 
-Given the way that GPT-3 is tested (simply giving it some text to complete) it's easy to devise new tasks for it to solve. No training datasets are required, since there is no fine-tuning, which is an advantage that comes from performing no fine-tuning. In order to evaluate GPT-3 further, OpenAI devised some additional tasks, and it intends to release the test datasets soon. The tasks we'll go over next are not benchmarks, but ad-hoc tasks OpenAI devised to test GPT-3.
+Given the way that GPT-3 is tested (simply giving it some text to complete) it's easy to devise new tasks for it to solve. No training datasets are required, which is an advantage that comes from performing no fine-tuning. In order to evaluate GPT-3 further, OpenAI devised some additional tasks, and it intends to release the test datasets soon. The tasks we'll go over next are not benchmarks, but ad-hoc tasks OpenAI devised to test GPT-3.
 
 ### Arithmetic Expressions
 
@@ -89,12 +91,12 @@ One-shot and zero-shot performance are somewhat degraded relative to few-shot pe
 
 Another task OpenAI came up with to test GPT-3 were SAT questions. The specific questions chosen were the analogy problems, which are multiple choice. Questions of this kind were present on the SAT (the exam Americans have to take to attend university) before 2005.
 
-```A typical example is: Audacious is to boldness as 
+A typical example is: Audacious is to boldness as 
  - (a) sanctimonious is to hypocrisy, 
  - (b) anonymous is to identity, 
  - (c) remorseful is to misdeed, 
  - (d) deleterious is to result, 
- - (e) impressionable is to temptation.```
+ - (e) impressionable is to temptation.
 
 The student is expected to choose which of the five word pairs has the same relationship as the original word pair. In the previous example the answer is “sanctimonious is to hypocrisy”. 
 
@@ -120,4 +122,5 @@ While OpenAI tried to remove the overlap between the training set and the benchm
 
 In the rest of the paper, OpenAI presents some thoughts on the limitations and impacts of GPT-3 (such as an analysis of bias and fairness, and the model's energy usage), as well as some related work. 
 
+***
 In conclusion, OpenAI has just moved the state-of-the-art in NLP. It was very interesting for me to understand what a model of this size can do, and what it can't. It's obviously not an AGI, but I found its capabilities surprising on some tasks. The [paper](https://arxiv.org/abs/2005.14165) is very clear and well composed, so I advise you to check it out :).
