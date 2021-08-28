@@ -1,7 +1,7 @@
-
-Mação
-=====
-
+---
+layout: page
+title: Mação
+---
 
 This is a satellite imge from my home region. This image is the latest available image from ESA's Sentinel 2 satellites.
  It's kept updated using some [scripts](https://github.com/fernandeslouro/terras) I made. I made this as a litte project
