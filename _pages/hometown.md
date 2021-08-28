@@ -12,4 +12,4 @@ area. In winter, it turns greener, but there's not a lot of forest at the moment
  alarming pace.
 
  I grew up here, and I have love for this land. You should visit if you have the chance.  
-![Mação viewed from the sky at 2021-08-22]("2021-08-22_11:21.png")
+![Mação viewed from the sky at 2021-08-22](2021-08-22_11:21.png)
