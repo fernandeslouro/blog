@@ -1,14 +1,10 @@
 
 
 
-
-
----
-
-layout: page
-
-title: About
-
+  
+---  
+layout: page  
+title: About  
 ---
 
 This is a satellite picture of Mação, my home region, taken on 2021-08-27.        It is the latest available image from 
