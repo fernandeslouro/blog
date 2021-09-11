@@ -1,13 +1,11 @@
 
 
 
-
-
 ---  
 layout: page  
 ---
 
-This is a satellite picture of Mação, my home region, taken on 2021-08-27. It is the latest available image from ESA's 
+This is a satellite picture of Mação, my home region, taken on 2021-08-27.It is the latest available image from ESA's 
 Sentinel 2 satellites. It's kept updated using some [scripts](https://github.com/fernandeslouro/terras) I made to have 
 something on my website to mark the passage of time. It all runs on a rented server I also use to self-host some 
 services.
