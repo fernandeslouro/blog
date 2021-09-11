@@ -14,9 +14,5 @@ In the summer months, the picture will appear very brown. Most of the area was b
 when the grass dies. In winter, it turns greener, but there's not a lot of forest now. The population is also shrinking 
 at an alarming pace.
 
-I grew up here, and I have love for this land. You should visit if you have the chance.
-
- 
-
-   
+I grew up here, and I have love for this land. You should visit if you have the chance.  
 ![Mação viewed from the sky at 2021-08-27](/assets/images/2021-08-27_11:21.png)
