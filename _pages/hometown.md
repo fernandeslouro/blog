@@ -2,7 +2,7 @@
 layout: page  
 ---
 
-This is a satellite picture of Mação, my home region, taken on 2022-04-14. It is the latest available image from ESA's 
+This is a satellite picture of Mação, my home region, taken on 2022-06-28. It is the latest available image from ESA's 
 Sentinel 2 satellites. It's kept updated using some [scripts](https://github.com/fernandeslouro/terras) I made, to have 
 something on my website to mark the passage of time.
 
@@ -19,4 +19,4 @@ I grew up here, and I have love for this land. You should visit if you have the 
  
 
    
-![Mação viewed from the sky at 2022-04-14](/assets/images/2022-04-14_11:21.png)
+![Mação viewed from the sky at 2022-06-28](/assets/images/2022-06-28_11:21.png)
