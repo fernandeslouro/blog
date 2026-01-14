@@ -1,3 +1,5 @@
+require 'set'
+
 module Jekyll
   class TagPageGenerator < Generator
     safe true
@@ -14,12 +16,14 @@ module Jekyll
     def initialize(site, base, tag)
       @site = site
       @base = base
-      @dir  = File.join('tag', tag)
+      slug = Jekyll::Utils.slugify(tag)
+      @dir  = File.join('tag', slug)
       @name = 'index.html'
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'tag.html')
       self.data['tag'] = tag
+      self.data['tag_slug'] = slug
       self.data['title'] = "Tag: #{tag}"
     end
   end

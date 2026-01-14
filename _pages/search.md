@@ -11,7 +11,6 @@ You can search my posts either by the words in the title or by the tag (e.g. **m
 	}
 
 	input[type=text] {
-		font-size: normal;
 	    outline: none;
 	    padding: 1rem;
 		background: rgb(236, 237, 238);
@@ -41,7 +40,7 @@ SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '/search.json',
-  searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+  searchResultTemplate: '<li><a href="{url}" title="{description}">{title}</a></li>',
   noResultsText: 'No results found',
   limit: 10,
   fuzzy: false,
