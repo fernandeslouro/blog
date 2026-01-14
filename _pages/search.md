@@ -13,7 +13,7 @@ You can search my posts either by the words in the title or by the tag (e.g. **m
 	input[type=text] {
 	    outline: none;
 	    padding: 1rem;
-		background: rgb(236, 237, 238);
+		background: var(--muted-bg);
 	    width: 100%;
 		-webkit-appearance: none;
 		font-family: inherit;

@@ -11,8 +11,57 @@ layout: compress
 	    {% include navigation.html %}
 	    
         {{ content }}
-        	    
+
     </main>
-            
+    <script>
+      (function () {
+        var storageKey = "theme";
+        var darkClass = "theme-dark";
+
+        function applyTheme(theme) {
+          document.documentElement.classList.toggle(darkClass, theme === "dark");
+          var button = document.getElementById("theme-toggle");
+          if (button) {
+            button.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+            button.textContent = theme === "dark" ? "Light mode" : "Dark mode";
+          }
+        }
+
+        function preferredTheme() {
+          var stored = null;
+          try {
+            stored = localStorage.getItem(storageKey);
+          } catch (e) {
+            stored = null;
+          }
+          if (stored === "dark" || stored === "light") {
+            return stored;
+          }
+          return window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+          applyTheme(preferredTheme());
+          var button = document.getElementById("theme-toggle");
+          if (!button) {
+            return;
+          }
+          button.addEventListener("click", function () {
+            var next = document.documentElement.classList.contains(darkClass)
+              ? "light"
+              : "dark";
+            try {
+              localStorage.setItem(storageKey, next);
+            } catch (e) {
+              // ignore storage errors
+            }
+            applyTheme(next);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
