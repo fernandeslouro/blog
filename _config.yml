@@ -29,12 +29,10 @@ sass:
   sass_dir:          _sass
   style:            :compressed
 
-plugins_dir:
-  - jekyll-paginate
-  - jekyll-sitemap  
-
 plugins:
+  - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 collections:
   pages:

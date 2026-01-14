@@ -1,6 +1,6 @@
 links:
 - title: Writing
-  url: / 
+  url: /
 - title: About
   url: /about
 - title: Mação
@@ -8,6 +8,6 @@ links:
 - title: Search
   url: /search
 - title: Rss
-  url: atom.xml
+  url: /atom.xml
 - title: Home
   url: http://louro.xyz    
